@@ -1,5 +1,4 @@
 import pydicom
-from pydicom import dcmread
 from pydicom.pixel_data_handlers.util import apply_voi_lut
 
 #def get_window_set(dcm):
