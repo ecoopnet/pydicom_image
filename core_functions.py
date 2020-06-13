@@ -1,5 +1,5 @@
 import pydicom
-from pydicom.pixel_data_handlers.util import apply_voi_lut
+#from pydicom.pixel_data_handlers.util import apply_voi_lut
 
 #def get_window_set(dcm):
 #  cs = dcm['WindowCenter'].value
