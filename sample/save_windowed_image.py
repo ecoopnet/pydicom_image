@@ -1,6 +1,12 @@
 #!/usr/bin/env python
 
-import ..pydicom_image
+import sys
+import os
+# add grandparent directory to include paths.
+grand_parent_path = os.path.join(os.path.dirname(__file__),'..','..')
+sys.path.append(grand_parent_path)
+
+import pydicom_image
 from pydicom import dcmread
 
 import cv2
