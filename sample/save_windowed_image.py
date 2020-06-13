@@ -9,8 +9,6 @@ sys.path.append(grand_parent_path)
 import pydicom_image
 from pydicom import dcmread
 
-import cv2
-
 dcm = dcmread('path/to/dcmfile')
 
 # Load windowed image from pre-loaded dcm with windowCenter=45, windowWidth=350.
@@ -33,5 +31,6 @@ import matplotlib.pyplot as plt
 plt.imsave('pyplot.png',img, cmap='gray')
 
 # By OpenCV2
+import cv2
 cv2.imwrite('cv2.png', img)
 
