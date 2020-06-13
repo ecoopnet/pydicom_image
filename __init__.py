@@ -1,5 +1,6 @@
 from .core_functions import *
 import pydicom
+import numpy as np
 
 # Convert DICOM pixel array to windowed pixel array.
 # If window is None, default first window center/width of input DICOM.
@@ -15,5 +16,5 @@ def dcm2img(filepath=None, dcm=None, window=None):
       window_center, window_width, intercept, slope = get_windowing(dcm)
       c = window_center if not window or window[0] == None else window[0]
       w = window_width  if not window or window[1] == None else window[1]
-      return window_image(img, c, w, intercept, slope) * 255.0
+      return (window_image(img, c, w, intercept, slope) * 255.0).astype(np.uint8)
 
